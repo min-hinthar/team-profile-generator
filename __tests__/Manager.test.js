@@ -1,10 +1,10 @@
-// import Manager class from lib/ for testing
-const Manager = require('../lib/Manager')
+// import Employee class from lib/ for testing
+const Employee = require('../lib/Employee')
 
 // test to expect properties of the class to equal to new Manager with added property officeNumber
-describe('Manager', () => {
+// describe('Manager', () => {
     it('Saves new Manager information', () => {
-        const newEmployee = new Manager('Su', 33333, 'su@email.com', 007);
+        const newEmployee = new Manager('Su', 33333, 'su@email.com', 2007,);
 
         expect(newEmployee.name).toEqual('Su');
         expect(newEmployee.id).toEqual(expect.any(Number));
@@ -13,7 +13,7 @@ describe('Manager', () => {
     })
 // test to expect methods of the Manager class to return new object values
     it('Tests Manager methods to return true to new Manager', () => {
-        const newEmployee = new Manager('Su', 33333, 'su@email.com', 007);
+        const newEmployee = new Manager ('Su', 33333, 'su@email.com', 2007,);
 
         expect(newEmployee.getName()).toEqual(newEmployee.name);
         expect(newEmployee.getId()).toEqual(newEmployee.id);
@@ -21,4 +21,4 @@ describe('Manager', () => {
         expect(newEmployee.getOfficeNumber()).toEqual(newEmployee.officeNumber);
         expect(newEmployee.getRole()).toEqual('Manager');
     })
-})
+// })

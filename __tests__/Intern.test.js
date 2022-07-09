@@ -1,8 +1,8 @@
-// import Intern class from lib/ for testing
-const Intern = require('../lib/Intern')
+// import Employee class from lib/ for testing
+const Employee = require('../lib/Employee')
 
 // test to expect properties of the class to equal to new Manager with added property School
-describe('Intern', () => {
+// describe('Intern', () => {
     it('Saves new Intern information', () => {
         const newEmployee = new Intern('Ken', 55555, 'ken@email.com', UCLA);
 
@@ -13,7 +13,7 @@ describe('Intern', () => {
     })
 // test to expect methods of the Intern class to return new object values
     it('Tests Intern methods to return true to new Intern', () => {
-        const newEmployee = new Intern('Ken', 55555, 'ken@email.com', UCLA);
+        const newEmployee = new Intern ('Ken', 55555, 'ken@email.com', UCLA);
 
         expect(newEmployee.getName()).toEqual(newEmployee.name);
         expect(newEmployee.getId()).toEqual(newEmployee.id);
@@ -21,4 +21,4 @@ describe('Intern', () => {
         expect(newEmployee.getSchool()).toEqual(newEmployee.school);
         expect(newEmployee.getRole()).toEqual('Intern');
     })
-})
+// })
