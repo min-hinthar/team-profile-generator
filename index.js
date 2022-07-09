@@ -147,8 +147,9 @@ const newEmployeePrompt = () => {
         })
     };
 
-    const writeFile = (fileContent) => {
-        fs.writeFile('./dist/index.html', fileContent, (err) => {
+// function to write team profile data and generate html markdown
+    const writeFile = (data) => {
+        fs.writeFile('./dist/index.html', data, (err) => {
             if (err) {
                 console.log('Error: Failed to write file');
             } else {
