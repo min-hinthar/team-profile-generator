@@ -140,7 +140,7 @@ const newEmployeePrompt = () => {
             if (data.employeeType === 'inputIntern') {
                 internPrompt();
             };
-            if (data.employeeType === 'done') {
+            if (data.employeeType === 'end') {
                 // Generate html markdown file
                 writeFile(data);
             }
