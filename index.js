@@ -97,8 +97,8 @@ const init = () => {
 const managerPrompt = () => {
     inquirer.prompt(managerQuestions)
     .then((data) => {
-        employee = new Manager(data.name, data.id, data.email, data.officeNumber)
-        teamProfile.push(employee);
+        data = new Manager(data.name, data.id, data.email, data.officeNumber)
+        teamProfile.push(data);
         return newEmployeePrompt();
     })
 };
@@ -107,8 +107,8 @@ const managerPrompt = () => {
 const engineerPrompt = () => {
     inquirer.prompt(engineerQuestions)
     .then((data) => {
-        employee = new Engineer(data.name, data.id, data.email, data.gitHub)
-        teamProfile.push(employee);
+        data = new Engineer(data.name, data.id, data.email, data.gitHub)
+        teamProfile.push(data);
         return newEmployeePrompt();
     })
 };
@@ -117,8 +117,8 @@ const engineerPrompt = () => {
 const internPrompt = () => {
     inquirer.prompt(internQuestions)
     .then((data) => {
-        employee = new Intern(data.name, data.id, data.email, data.school)
-        teamProfile.push(employee);
+        data = new Intern(data.name, data.id, data.email, data.school)
+        teamProfile.push(data);
         return newEmployeePrompt();
     })
 };
