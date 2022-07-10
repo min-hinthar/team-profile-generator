@@ -158,4 +158,7 @@ const newEmployeePrompt = () => {
                 console.log('Success! You have generated your team profile!');
             }
         })
-    }; 
+    };
+    
+    init();
+    
