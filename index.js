@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 // require fs file write package
 const fs = require('fs');
 
+// require template html file path
+const htmlTemplate = require('./src/indexTemplate')
 
 // import Manager class
 const Manager = requrie('./lib/Manager');
@@ -95,8 +97,8 @@ const init = () => {
 const managerPrompt = () => {
     inquirer.prompt(managerQuestions)
     .then((data) => {
-        data = new Manager(data.name, data.id, data.email, data.officeNumber)
-        teamProfile.push(data);
+        employee = new Manager(data.name, data.id, data.email, data.officeNumber)
+        teamProfile.push(employee);
         return newEmployeePrompt();
     })
 };
@@ -105,8 +107,8 @@ const managerPrompt = () => {
 const engineerPrompt = () => {
     inquirer.prompt(engineerQuestions)
     .then((data) => {
-        data = new Engineer(data.name, data.id, data.email, data.gitHub)
-        teamProfile.push(data);
+        employee = new Engineer(data.name, data.id, data.email, data.gitHub)
+        teamProfile.push(employee);
         return newEmployeePrompt();
     })
 };
@@ -115,8 +117,8 @@ const engineerPrompt = () => {
 const internPrompt = () => {
     inquirer.prompt(internQuestions)
     .then((data) => {
-        data = new Intern(data.name, data.id, data.email, data.school)
-        teamProfile.push(data);
+        employee = new Intern(data.name, data.id, data.email, data.school)
+        teamProfile.push(employee);
         return newEmployeePrompt();
     })
 };
@@ -142,7 +144,7 @@ const newEmployeePrompt = () => {
             };
             if (data.employeeType === 'end') {
                 // Generate html markdown file
-                writeFile(data);
+                writeFile(htmlTemplate(teamProfile));
             }
         })
     };
@@ -156,4 +158,4 @@ const newEmployeePrompt = () => {
                 console.log('Success! You have generated your team profile!');
             }
         })
-    } 
+    }; 
