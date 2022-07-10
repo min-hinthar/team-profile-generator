@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // require template html file path
-const htmlTemplate = require('./src/indexTemplate')
+const htmlTemplate = require('./src/htmlTemplate')
 
 // import Manager class
 const Manager = requrie('./lib/Manager');
