@@ -4,7 +4,7 @@ const Employee = require('../lib/Employee')
 // test to expect properties of the class to equal to new Employee
 // describe('Employee', () => {
     it('Saves new Employee information', () => {
-        const newEmployee = new Employee('Min', 2, 'min@email.com');
+        const newEmployee = new Employee ('Min', 2, 'min@email.com');
 
         expect(newEmployee.name).toBe('Min');
         expect(typeof(newEmployee.id)).toBe(expect.any(Number));
