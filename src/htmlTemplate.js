@@ -1,5 +1,9 @@
+
+
+
+
 // template index.html for writeFile data of new employees to be stored
-const htmlTemplate = data => {
+const htmlTemplate = (teamProfileCards) => {
 
 // Use bootstrap cards to display html. Ref: https://getbootstrap.com/docs/4.3/components/card/
     return `
@@ -25,7 +29,7 @@ const htmlTemplate = data => {
                 <div class="container">
                     <div class="row">
                         <div class="row col-12 d-flex justify-content-center">
-
+                            ${teamProfileCards}
                         </div>
                     </div>
                 </div>
@@ -37,8 +41,6 @@ const htmlTemplate = data => {
         </body>
 </html>
 `
-
-
 };
 
 // export htmlTemplate as module

@@ -153,7 +153,7 @@ const newEmployeePrompt = () => {
     const writeFile = (data) => {
         fs.writeFile('./dist/index.html', data, (err) => {
             if (err) {
-                console.log('Error: Failed to write file');
+                console.log('Error: Failed to save/generate team profile. Please try again.');
             } else {
                 console.log('Success! You have generated your team profile!');
             }
