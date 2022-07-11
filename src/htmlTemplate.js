@@ -11,9 +11,14 @@ const managerCard = (Manager) => {
         <div class="col-4 mt-4">
             <div class="card h-100">
                 <div class="card-header">
-                    <h3>
+                    <h2>
                         ${Manager.name}
+                    </h2>
+                    <h3>
+                        Manager
                     </h3>
+                    <i class="medium material-icons">account_box</i>
+                </div>
 
     `
 };
@@ -28,6 +33,8 @@ const engineerCard = (Engineer) => {
                     <h3>
                         ${Engineer.name}
                     </h3>
+                    <i class="medium material-icons">build</i>
+                </div>
 
     `
 };
@@ -42,6 +49,8 @@ const internCard = (Intern) => {
                     <h3>
                         ${Intern.name}
                     </h3>
+                    <i class="medium material-icons">school</i>
+                </div>
 
     `
 };
