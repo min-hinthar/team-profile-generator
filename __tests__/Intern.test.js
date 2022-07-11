@@ -7,9 +7,9 @@ const Intern = require('../lib/Intern')
         const newEmployee = new Intern('Ken', 5, 'ken@email.com', 'UCLA');
 
         expect(newEmployee.name).toBe('Ken');
-        expect(typeof(newEmployee.id)).toBe(expect.any(Number));
-        expect(typeof(newEmployee.email)).toBe(expect.any(String));
-        expect(typeof(newEmployee.school)).toBe(expect.any(String));
+        expect(parseInt(newEmployee.id)).toEqual(expect.any(Number));
+        expect(typeof(newEmployee.email)).toEqual(expect.any(String));
+        expect(typeof(newEmployee.school)).toEqual(expect.any(String));
     });
 // test to expect methods of the Intern class to return new object values
     it('Tests Intern methods to return true to new Intern', () => {

@@ -132,7 +132,7 @@ const newEmployeePrompt = () => {
         choices: [
             {name: 'Engineer', value: 'inputEngineer'},
             {name: 'Intern', value: 'inputIntern'},
-            {name: 'End', value: 'end'}
+            {name: 'End to Save Team Profile', value: 'end'}
         ]
     }])
     .then( function (data) {

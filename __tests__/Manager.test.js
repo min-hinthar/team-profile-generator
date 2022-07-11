@@ -7,9 +7,9 @@ const Manager = require('../lib/Manager')
         const newEmployee = new Manager('Su', 3, 'su@email.com', 2007);
 
         expect(newEmployee.name).toBe('Su');
-        expect(typeof(newEmployee.id)).toBe(expect.any(Number));
-        expect(typeof(newEmployee.email)).toBe(expect.any(String));
-        expect(typeof(newEmployee.officeNumber)).toBe(expect.any(Number));
+        expect(parseInt(newEmployee.id)).toEqual(expect.any(Number));
+        expect(typeof(newEmployee.email)).toEqual(expect.any(String));
+        expect(parseInt(newEmployee.officeNumber)).toEqual(expect.any(Number));
     });
 // test to expect methods of the Manager class to return new object values
     it('Tests Manager methods to return true to new Manager', () => {

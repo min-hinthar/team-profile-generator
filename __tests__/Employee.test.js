@@ -7,8 +7,8 @@ const Employee = require('../lib/Employee')
         const newEmployee = new Employee ('Min', 2, 'min@email.com');
 
         expect(newEmployee.name).toBe('Min');
-        expect(typeof(newEmployee.id)).toBe(expect.any(Number));
-        expect(typeof(newEmployee.email)).toBe(expect.any(String));
+        expect(parseInt(newEmployee.id)).toEqual(expect.any(Number));
+        expect(typeof(newEmployee.email)).toEqual(expect.any(String));
     });
 // test to expect methods of the Employee class to return new object values
     it('Tests new Employee methods to return true to new class', () => {

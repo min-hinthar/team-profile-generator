@@ -7,9 +7,9 @@ const Engineer = require('../lib/Engineer')
         const newEmployee = new Engineer('Dav', 4, 'dav@email.com', 'dav-dev');
 
         expect(newEmployee.name).toBe('Dav');
-        expect(typeof(newEmployee.id)).toBe(expect.any(Number));
-        expect(typeof(newEmployee.email)).toBe(expect.any(String));
-        expect(typeof(newEmployee.github)).toBe(expect.any(String));
+        expect(parseInt(newEmployee.id)).toEqual(expect.any(Number));
+        expect(typeof(newEmployee.email)).toEqual(expect.any(String));
+        expect(typeof(newEmployee.github)).toEqual(expect.any(String));
     });
 // test to expect methods of the Engineer class to return new object values
     it('Tests Engineer methods to return true to new Engineer', () => {
