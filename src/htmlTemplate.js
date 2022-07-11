@@ -6,15 +6,45 @@ const Manager = require("../lib/Manager");
 
 
 // create managerCard
-const managerCard = (Manager)
+const managerCard = (Manager) => {
+    return `
+        <div class="col-4 mt-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h3>
+                        ${Manager.name}
+                    </h3>
+
+    `
+};
 
 
 // create engineerCard
-const engineerCard = (Engineer)
+const engineerCard = (Engineer) => {
+    return `
+        <div class="col-4 mt-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h3>
+                        ${Engineer.name}
+                    </h3>
+
+    `
+};
 
 
 // create internCard
-const internCard = (Intern)
+const internCard = (Intern) => {
+    return `
+        <div class="col-4 mt-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h3>
+                        ${Intern.name}
+                    </h3>
+
+    `
+};
 
 
 // template index.html for writeFile data of new employees to be stored
@@ -31,6 +61,8 @@ const htmlTemplate = (teamProfileCards) => {
         <title>Team Profile Generator</title>
         <!-- link bootstrap to html: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- link to icons: https://materializecss.com/icons.html -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
         <body>
             <div class="container-fluid">
