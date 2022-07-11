@@ -1,5 +1,20 @@
+const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
+const Manager = require("../lib/Manager");
+
+// generate teamProficeCards from teamProfile data written by user input for Manager, Engineer and Intern
 
 
+// create managerCard
+const managerCard = (Manager)
+
+
+// create engineerCard
+const engineerCard = (Engineer)
+
+
+// create internCard
+const internCard = (Intern)
 
 
 // template index.html for writeFile data of new employees to be stored
