@@ -7,7 +7,7 @@ const managerCard = (Manager) => {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header bg-warning text-center">
                 <h2>
                     ${Manager.name}
                 </h2>
@@ -37,7 +37,7 @@ const engineerCard = (Engineer) => {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header bg-warning text-center">
                 <h3>
                     ${Engineer.name}
                 </h3>
@@ -60,12 +60,12 @@ const engineerCard = (Engineer) => {
 };
         
         
-    // create internCard
+// create internCard
 const internCard = (Intern) => {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header bg-warning text-center">
                 <h3>
                     ${Intern.name}
                 </h3>
@@ -152,7 +152,7 @@ htmlTemplate = (teamProfile) => {
         }
         
         // intern function is called for role === Intern 
-        if (role === 'Manager') {
+        if (role === 'Intern') {
             const generateIntern = internCard(employee);
             teamArray.push(generateIntern);
         }

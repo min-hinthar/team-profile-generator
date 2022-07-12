@@ -151,7 +151,7 @@ const newEmployeePrompt = () => {
 
 // function to write team profile data and generate html markdown
     const writeFile = (data) => {
-        fs.writeFile('./dist/index.html', data, (err) => {
+        fs.writeFile('./dist/teamProfile.html', data, (err) => {
             if (err) {
                 console.log('Error: Failed to save/generate team profile. Please try again.');
             } else {
