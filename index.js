@@ -7,11 +7,11 @@ const fs = require('fs');
 const htmlTemplate = require('./src/htmlTemplate')
 
 // import Manager class
-const Manager = requrie('./lib/Manager');
+const Manager = require('./lib/Manager');
 // impor Engineer class
-const Engineer = requrie('./lib/Engineer');
+const Engineer = require('./lib/Engineer');
 // import Intern class
-const Intern = requrie('./lib/Intern');
+const Intern = require('./lib/Intern');
 
 // create new empty array for data to be written as Team Profile
 const teamProfile = [];
