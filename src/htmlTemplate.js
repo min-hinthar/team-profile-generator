@@ -6,124 +6,87 @@ const Manager = require("../lib/Manager");
 const managerCard = (Manager) => {
     return `
     <div class="col-4 mt-4">
-    <div class="card h-100">
-    <div class="card-header">
-    <h2>
-    ${Manager.name}
-    </h2>
-    <h3>
-    Manager
-    </h3>
-    <i class="medium material-icons">account_box</i>
-    </div>
-    <div class="card-body">
-    <p class="id"> 
-                        ID : ${Manager.id}
-                        </p>
-                        <p class="email"> 
-                        EMAIL : <a href="mail:${Manager.email}"> ${Manager.email}</a>
-                        </p>
-                        <p class="office"> 
-                        Office Number : ${Manager.officeNumber}
-                        </p>
-                </div>
+        <div class="card h-100">
+            <div class="card-header">
+                <h2>
+                    ${Manager.name}
+                </h2>
+                <h3>
+                    Manager
+                </h3>
+                <i class="medium material-icons">account_box</i>
+            </div>
+            <div class="card-body">
+                <p class="id"> 
+                    ID : ${Manager.id}
+                </p>
+                <p class="email"> 
+                    EMAIL : <a href="mail:${Manager.email}"> ${Manager.email}</a>
+                </p>
+                <p class="office"> 
+                    Office Number : ${Manager.officeNumber}
+                </p>
             </div>
         </div>
-        `
+    </div>
+`
 };
 
 // create engineerCard
 const engineerCard = (Engineer) => {
     return `
     <div class="col-4 mt-4">
-    <div class="card h-100">
-    <div class="card-header">
-    <h3>
-    ${Engineer.name}
-    </h3>
-    <i class="medium material-icons">build</i>
-    </div>
-    <div class="card-body">
-    <p class="id"> 
-    ID : ${Engineer.id}
-    </p>
-    <p class="email"> 
-    EMAIL : <a href="mail:${Engineer.email}"> ${Engineer.email}</a>
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>
+                    ${Engineer.name}
+                </h3>
+                <i class="medium material-icons">build</i>
+            </div>
+            <div class="card-body">
+                <p class="id"> 
+                    ID : ${Engineer.id}
+                </p>
+                <p class="email"> 
+                    EMAIL : <a href="mail:${Engineer.email}"> ${Engineer.email}</a>
                 </p>
                 <p class="office"> 
                     GitHub : <a href="https://github.com/${Engineer.gitHub}"> ${Engineer.gitHub}</a>
-                    </p>
-                    </div>
+                </p>
+            </div>
         </div>
-        </div>
-        `
+    </div>
+`
 };
         
         
     // create internCard
 const internCard = (Intern) => {
-        return `
+    return `
     <div class="col-4 mt-4">
-    <div class="card h-100">
-    <div class="card-header">
-    <h3>
-    ${Intern.name}
-    </h3>
-    <i class="medium material-icons">school</i>
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>
+                    ${Intern.name}
+                </h3>
+                <i class="medium material-icons">school</i>
+            </div>
+            <div class="card-body">
+                <p class="id"> 
+                    ID : ${Intern.id}
+                </p>
+                <p class="email"> 
+                    EMAIL : <a href="mail:${Intern.email}"> ${Intern.email}</a>
+                </p>
+                <p class="office"> 
+                    Office Number : ${Intern.school}
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-    <p class="id"> 
-    ID : ${Intern.id}
-    </p>
-    <p class="email"> 
-    EMAIL : <a href="mail:${Intern.email}"> ${Intern.email}</a>
-    </p>
-    <p class="office"> 
-    Office Number : ${Intern.school}
-    </p>
-    </div>
-    </div>
-    </div>
-    `
+`
 };
     
-// generate teamProficeCards from teamProfile data written by user input for Manager, Engineer and Intern
-htmlTemplate = (teamProfile) => {
-    // create empty array to hold cards
-    teamArray = [];
-    
-    // loop through teamProfile data
-    for (let i = 0; i < teamProfile.length; i++ ) {
-        const employee = teamProfile[i];
-        const role = employee.getRole();
-        
-        // manager function is called for role === Manager 
-        if (role === 'Manager') {
-            const generateManager = managerCard(employee);
-            teamArray.push(generateManager);
-        }
-        
-        // engineer function is called for role === Engineer 
-        if (role === 'Engineer') {
-            const generateEngineer = engineerCard(employee);
-            teamArray.push(generateEngineer);
-        }
-        
-        // intern function is called for role === Intern 
-        if (role === 'Manager') {
-            const generateIntern = internCard(employee);
-            teamArray.push(generateIntern);
-        }
-    }
-    
-// create teamProfileCards to join strings of teamArray
-const teamProfileCards = teamArray.join('')
-
-// return htmlTemplate function
-const generateTeamProfile = indexHtml(teamProfileCards);
-return generateTeamProfile;
-};
-
 // indexHtml created to writeFile data of new employees
 const indexHtml = (teamProfileCards) => {
     
@@ -166,8 +129,42 @@ const indexHtml = (teamProfileCards) => {
     </html>
     `
 };
+// generate teamProficeCards from teamProfile data written by user input for Manager, Engineer and Intern
+htmlTemplate = (teamProfile) => {
+    // create empty array to hold cards
+    teamArray = [];
+    
+    // loop through teamProfile data
+    for (let i = 0; i < teamProfile.length; i++ ) {
+        const employee = teamProfile[i];
+        const role = employee.getRole();
+        
+        // manager function is called for role === Manager 
+        if (role === 'Manager') {
+            const generateManager = managerCard(employee);
+            teamArray.push(generateManager);
+        }
+        
+        // engineer function is called for role === Engineer 
+        if (role === 'Engineer') {
+            const generateEngineer = engineerCard(employee);
+            teamArray.push(generateEngineer);
+        }
+        
+        // intern function is called for role === Intern 
+        if (role === 'Manager') {
+            const generateIntern = internCard(employee);
+            teamArray.push(generateIntern);
+        }
+    }
 
+// create teamProfileCards to join strings of teamArray
+const teamProfileCards = teamArray.join('')
 
+// return htmlTemplate function
+const generateTeamProfile = indexHtml(teamProfileCards);
+return generateTeamProfile;
+};
 
 // export htmlTemplate as module
 module.exports = htmlTemplate;
