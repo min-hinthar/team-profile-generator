@@ -88,7 +88,7 @@ const internCard = (Intern) => {
 };
     
 // generate teamProficeCards from teamProfile data written by user input for Manager, Engineer and Intern
-teamProfileCards = (teamProfile) => {
+htmlTemplate = (teamProfile) => {
     // create empty array to hold cards
     teamArray = [];
     
@@ -115,10 +115,17 @@ teamProfileCards = (teamProfile) => {
             teamArray.push(generateIntern);
         }
     }
+    
+// create teamProfileCards to join strings of teamArray
+const teamProfileCards = teamArray.join('')
+
+// return htmlTemplate function
+const generateTeamProfile = indexHtml(teamProfileCards);
+return generateTeamProfile;
 };
 
-// template index.html for writeFile data of new employees to be stored
-const htmlTemplate = (teamProfileCards) => {
+// indexHtml created to writeFile data of new employees
+const indexHtml = (teamProfileCards) => {
     
     // Use bootstrap cards to display html. Ref: https://getbootstrap.com/docs/4.3/components/card/
     return `
