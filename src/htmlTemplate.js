@@ -74,7 +74,19 @@ const engineerCard = (Engineer) => {
                     </h3>
                     <i class="medium material-icons">build</i>
                 </div>
-
+                <div class="card-body">
+                    <p class="id"> 
+                        ID : ${Engineer.id}
+                    </p>
+                    <p class="email"> 
+                        EMAIL : <a href="mail:${Engineer.email}"> ${Engineer.email}</a>
+                    </p>
+                    <p class="office"> 
+                        GitHub : <a href="https://github.com/${Engineer.gitHub}"> ${Engineer.gitHub}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     `
 };
 
