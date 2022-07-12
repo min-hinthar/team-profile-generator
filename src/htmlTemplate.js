@@ -46,7 +46,19 @@ const managerCard = (Manager) => {
                     </h3>
                     <i class="medium material-icons">account_box</i>
                 </div>
-
+                <div class="card-body">
+                    <p class="id"> 
+                        ID : ${Manager.id}
+                    </p>
+                    <p class="email"> 
+                        EMAIL : <a href="mail:${Manager.email}"> ${Manager.email}</a>
+                    </p>
+                    <p class="office"> 
+                        Office Number : ${Manager.officeNumber}
+                    </p>
+                </div>
+            </div>
+        </div>
     `
 };
 
