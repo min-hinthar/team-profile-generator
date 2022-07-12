@@ -8,12 +8,12 @@ const managerCard = (Manager) => {
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header bg-warning text-center">
-                <h2>
-                    ${Manager.name}
-                </h2>
                 <h3>
-                    Manager
+                    ${Manager.name}
                 </h3>
+                <h4>
+                    Manager
+                </h4>
                 <i class="medium material-icons">account_box</i>
             </div>
             <div class="card-body">
@@ -41,6 +41,9 @@ const engineerCard = (Engineer) => {
                 <h3>
                     ${Engineer.name}
                 </h3>
+                <h4>
+                    Engineer
+                </h4>
                 <i class="medium material-icons">build</i>
             </div>
             <div class="card-body">
@@ -50,7 +53,7 @@ const engineerCard = (Engineer) => {
                 <p class="email"> 
                     EMAIL : <a href="mail:${Engineer.email}"> ${Engineer.email}</a>
                 </p>
-                <p class="office"> 
+                <p class="gitHub"> 
                     GitHub : <a href="https://github.com/${Engineer.gitHub}"> ${Engineer.gitHub}</a>
                 </p>
             </div>
@@ -69,6 +72,9 @@ const internCard = (Intern) => {
                 <h3>
                     ${Intern.name}
                 </h3>
+                <h4>
+                    Intern
+                </h4>
                 <i class="medium material-icons">school</i>
             </div>
             <div class="card-body">
@@ -78,8 +84,8 @@ const internCard = (Intern) => {
                 <p class="email"> 
                     EMAIL : <a href="mail:${Intern.email}"> ${Intern.email}</a>
                 </p>
-                <p class="office"> 
-                    Office Number : ${Intern.school}
+                <p class="school"> 
+                    School : ${Intern.school}
                 </p>
             </div>
         </div>
