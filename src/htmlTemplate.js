@@ -87,7 +87,36 @@ const internCard = (Intern) => {
     `
 };
     
+// generate teamProficeCards from teamProfile data written by user input for Manager, Engineer and Intern
+teamProfileCards = (teamProfile) => {
+    // create empty array to hold cards
+    teamArray = [];
     
+    // loop through teamProfile data
+    for (let i = 0; i < teamProfile.length; i++ ) {
+        const employee = teamProfile[i];
+        const role = employee.getRole();
+        
+        // manager function is called for role === Manager 
+        if (role === 'Manager') {
+            const generateManager = managerCard(employee);
+            teamArray.push(generateManager);
+        }
+        
+        // engineer function is called for role === Engineer 
+        if (role === 'Engineer') {
+            const generateEngineer = engineerCard(employee);
+            teamArray.push(generateEngineer);
+        }
+        
+        // intern function is called for role === Intern 
+        if (role === 'Manager') {
+            const generateIntern = internCard(employee);
+            teamArray.push(generateIntern);
+        }
+    }
+};
+
 // template index.html for writeFile data of new employees to be stored
 const htmlTemplate = (teamProfileCards) => {
     
@@ -130,37 +159,7 @@ const htmlTemplate = (teamProfileCards) => {
     </html>
     `
 };
-    
-    
-// generate teamProficeCards from teamProfile data written by user input for Manager, Engineer and Intern
-teamProfileCards = (teamProfile) => {
-    // create empty array to hold cards
-    teamArray = [];
-    
-    // loop through teamProfile data
-    for (let i = 0; i < teamProfile.length; i++ ) {
-        const employee = teamProfile[i];
-        const role = employee.getRole();
-        
-        // manager function is called for role === Manager 
-        if (role === 'Manager') {
-            const generateManager = managerCard(employee);
-            teamArray.push(generateManager);
-        }
-        
-        // engineer function is called for role === Engineer 
-        if (role === 'Engineer') {
-            const generateEngineer = engineerCard(employee);
-            teamArray.push(generateEngineer);
-        }
-        
-        // intern function is called for role === Intern 
-        if (role === 'Manager') {
-            const generateIntern = internCard(employee);
-            teamArray.push(generateIntern);
-        }
-    }
-};
+
 
 
 // export htmlTemplate as module
